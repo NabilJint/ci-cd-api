@@ -1,0 +1,8 @@
+node_modules
+.git
+.github
+tests
+coverage
+*.md
+.eslintrc*
+eslint.config.js
