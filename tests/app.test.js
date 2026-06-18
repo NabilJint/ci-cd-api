@@ -23,3 +23,12 @@ describe("GET /api/status", () => {
 });
 
 
+describe("GET /api/info", () => {
+  it("should return 200 and system info", async () => {
+    const res = await request(app).get("/api/info");
+    expect(res.status).toBe(200);
+    expect(res.body.nodeVersion).toBeDefined();
+    expect(res.body.platform).toBeDefined();
+    expect(res.body.memoryUsage).toBeDefined();
+  });
+});
