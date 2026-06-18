@@ -17,6 +17,12 @@ app.get("/api/status", (req, res) => {
   });
 });
 
-
+app.get("/api/info", (req, res) => {
+  res.status(200).json({
+    nodeVersion: process.version,
+    platform: process.platform,
+    memoryUsage: process.memoryUsage().heapUsed,
+  });
+});
 
 module.exports = app;
