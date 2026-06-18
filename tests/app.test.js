@@ -16,7 +16,7 @@ describe("GET /api/status", () => {
   it("should return 200 and service info", async () => {
     const res = await request(app).get("/api/status");
     expect(res.status).toBe(200);
-    expect(res.body.service).toBe("wrong-name");
+    expect(res.body.service).toBe("ci-cd-api");
     expect(res.body.version).toBe("1.0.0");
     expect(res.body.uptime).toBeDefined();
   });
